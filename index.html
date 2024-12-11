@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous">
+    </script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+    crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./styles/css/normalize.css">
+    <link rel="stylesheet" href="./styles/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Federo&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <script src="https://kit.fontawesome.com/21765ba68c.js" crossorigin="anonymous"></script>
+    <title>Editor de Meme</title>
+</head>
+<body class="modo-oscuro">
+    <header>
+        <h1 id="titulo">Generador de Memes</h1>
+        <div class="botones-cabezera">
+            <button id="imagen"><i class="fi fi-ss-file-image"></i>Imagen</button>
+            <button id="texto"><i class="fa-sharp fa-solid fa-a"></i>Texto</button>
+            <button id="foco"><i class="fa-regular fa-lightbulb"></i>Moso Oscuro</button>
+        </div>  
+    </header> 
+    <main>
+        <section id="contenedor-meme"> <!-------CONTENEDOR DE MEME--------------->
+            <p id="texto-top">TOP TEX</p>
+            <div class="contenedor-imagen">
+                <img id="imagen-descargada" src="" alt="">
+            </div>  
+            <p id="boton-text">BOTTOM TEXT</p>
+            <button id="btn-descarga">Descargar Meme</button>
+        </section>
+    </main> 
+    <aside id="opciones-imagen"> 
+        <div id="contenedor-h3">      <!--------OPCIONES DE IMAGEN-------------->
+            <h3>IMAGEN</h3>
+        </div>
+        <div id="url">  
+            <h5>URL</h5>    <!---AQUI SE COLOCA URL DE IMAGEN--->
+            <form>
+                <label for="url"></label>
+                <input id="tipo-texto" type="text">
+            </form> 
+        </div> 
+        <div id="fondo">  
+            <h5>FONDO</h5>  <!---TIPOS DE FONDO-->
+            <form> 
+                <label for="color de fondo"></label>
+                <input id="colorBackground" type="color">
+            
+                <label for="opciones de fondo"></label>
+                <select name="Ninguno" id="opciones-fondo">
+                    <option>Ninguno</option>
+                    <option>Aclarar</option>
+                    <option>Oscurecer</option>
+                    <option>Diferencia</option>
+                    <option>Luminocidad</option>
+                    <option>Multiplicar</option>
+                </select>
+            </form> 
+        </div> 
+        <div id="filtros">  
+            <h5 class="h5">FILTROS</h5>    <!----AQUI LOS FILTROS---------->
+        </div>    
+        <div id="range-opciones">   
+            <form>
+                <label>BRILLO</label>
+                <input id="brillo"  type="range" min="0" max="1">
+
+                <label>OPACIDAD</label>
+                <input id="opacidad" type="range" min="0" max="1">
+
+                <label>CONTRASTE</label>
+                <input id="contraste" type="range" min="100" max="1000">
+
+                <label>DESENFOQUE</label>
+                <input id="desenfoque" type="range" min="0" max="10">
+
+                <label>ESCALA DE GRISES</label>
+                <input id="escala" type="range" min="0" max="100">
+
+                <label>SEPIA</label>
+                <input id="sepia" type="range" min="0" max="100">
+
+                <label>HUE</label>
+                <input id="hue" type="range" min="0" max="360">
+
+                <label>SATURADO</label>
+                <input id="saturado" type="range" min="100" max="1000">
+
+                <label>NEGATIVO</label>
+                <input id="negativo" type="range" min="0" max="1">
+            </form>
+        </div>
+        <div >  
+            <button id="restablecer">Reestablecer filtros</button>
+        </div>  
+    </aside>
+    <aside id="opciones-texto">   <!--------OPCIONES DE TEXTO--------------->
+        <h3 id="tituloh3">TEXTO</h3>
+        <h5 id="superior">SUPERIOR</h5>
+        <p id="parrafo-topt">TOP TEXT</p>
+
+        <label id="texto-superior">Sin texto superior</label>
+        <input type="checkbox">
+
+        <h5 id="tituloh5">INFERIOR</h5>  
+        <p id="parrafo-botont">BOTTOM TEXT</p>
+        
+        <label id="texto-inferior">Sin texto inferior</label>
+        <input type="checkbox">
+
+        <h5 id="titulo-fuente">FUENTE</h5>   <!------TIPOS DE FUENTE------------>
+            <label for="fuentes"></label>
+            <select name="" id="clases-fuentes">
+                <option value="Arial">Arial</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="American Typewriter">American Typewriter</option>
+                <option value="Andale Mono">Andale Mono</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Impact">Impact</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+            </select>
+        <div id="tamaño-alineacion">      <!-------TAMAÑOS DE FUENTE---------------->
+            <label for="tamaño de fuente"></label>
+            <input type="number" name="" id="tamaño-texto" min="12" max="40">
+            <!------BOTONES DE ALINEADO DE TEXTO------------->
+            <button id="izquierda"><i class="fa-solid fa-align-left"></i></button>
+        
+            <button id="centro"><i class="fa-solid fa-align-center"></i></button>  
+
+            <button id="derecha"><i class="fa-solid fa-align-right"></i></button>
+        </div>  
+        <div>    <!--------COLOR DE TEXTO------------------->
+            <h5 id="colorh5">COLOR</h5>
+                <label for="color del texto"></label>
+                <input id="input-color" type="color" value="#000000">
+            <h5 id="fondoh5">FONDO</h5>   <!------COLOR DE FONDO-------------------->
+                <label for="color de fondo"></label>
+                <input id="input-fondo" type="color" value="#ffffff">
+        </div>
+        <div>  <!-----OPCIÓN DE TRANSPARENCIA---------------->
+            <label id="fondo-transp">Fondo transparente</label>
+            <input id="input-check" type="checkbox">
+        </div>
+        <div id="contorno-div">
+            <h5 id="contornoh5">CONTORNO</h5>   <!------OPCIONES DE CONTORNO---------------------->
+                <button id="btn-ninguno">Ninguno</button>
+                <button id="btn-claro">Claro</button>
+                <button id="btn-oscuro">Oscuro</button>
+        </div>
+        <div id="espacio-div">  <!-----ESPACIADO---------->
+            <h5 id="espaciadoh5">ESPACIADO</h5>
+            <label for="espaciado"></label>
+            <input id="input-espacio" type="number" min="10"  max="50">
+        </div>
+        <div id="inter-div">  <!------INTERNLINEADO---------->
+            <h5 id="interlh5">INTERLINEADO</h5>
+            <select name="" id="inter-select">
+                <option value="0.8">0.8</option>
+                <option value="1">1</option>
+                <option value="1.2">1.2</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+            </select>
+        </div>
+    </aside>
+    <script src="main.js"></script>
+</body>
+</html>
+
+<!--<i class="fa-solid fa-align-left"></i> <!---alineacion izquierda-->
+    <!---- <i class="fa-solid fa-align-center"></i> <!---alineacion centro--->
+    <!--<i class="fa-solid fa-align-right"></i> <!---alineacion derecha--->
+    <!--<i class="fi fi-ss-file-image"></i> <!--icono imgen para modo claro-->
+    <!--<i class="fa-light fa-image"></i><!--icono imagen-->
+    <!--<i class="fa-solid fa-lightbulb"></i><!--icono foco modo oscuro-->
+    <!--<i class="fa-regular fa-lightbulb"></i><!--icono foco modo claro-->
+    <!--<i class="fa-sharp fa-solid fa-a"></i><!--icono de texto-->
+    <!--<i class="fa-duotone fa-solid fa-a"></i><!--icono de texto-->
+

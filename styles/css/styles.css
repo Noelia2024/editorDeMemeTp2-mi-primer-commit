@@ -1,0 +1,324 @@
+.modo-oscuro{
+    margin: 0;
+    background-color: #30343f;
+}
+
+header{
+    width: 100%vw;
+    height: 130px;
+    background-color: #191e2b;
+}
+
+#titulo{     /*---h1---*/
+    margin: 0;
+    font-family: "Open Sans";
+    color: #ffffff;
+    text-align: center;
+}
+
+.botones-cabezera{    /*----botones header---*/
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#imagen, #texto, #foco{  
+    font-size: 15px; 
+    font-family: "Open Sans";
+    color: #ffffff;
+    background-color: #191e2b;
+    border-radius: 3px 3px 3px 3px;
+    border: none;
+    height: 40px;
+}
+
+#imagen:hover{
+    cursor: pointer;
+    background-color: #4e5565
+} 
+#texto:hover{
+    cursor: pointer;
+    background-color: #4e5565
+} 
+#foco:hover{
+    cursor: pointer;
+    background-color: #4e5565
+}
+/*-------^^AQUI SE TERMINA EL HEADER^^-----*/
+
+#contenedor-meme{
+    /*border: 5px solid yellow;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.contenedor-imagen{  /*---contiene la imagen a descargar--*/
+    height: 500px;
+    width: 50%;
+    /*border: 3px solid green*/
+    background-color: #000000;
+}
+
+#texto-top, #boton-text{
+    margin: 0;
+    font-size: 40px;
+    font-family: "Impact";
+    /*border: 3px solid red;*/
+    text-align: center;
+    align-content: center;
+    height: 70px;
+    width: 50%;
+    background-color: #ffffff;
+}
+
+#btn-descarga{
+    padding: 15px 15px;
+    margin: 30px;
+    background-color: #2e7d32;
+    font-family: "Open Sans";
+    color: #ffffff;
+    border-radius: 3px 3px 3px 3px ;
+    border: none;
+}
+#btn-descarga:hover{
+    cursor: pointer;
+    background-color: #057a0b;
+}
+/*-------AQUI SE TERMINA LA SECCION DE MAIN-------*/
+
+#opciones-imagen{       /*---Opciones de imagen----*/
+    width: 18%;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #252935;
+}
+
+#contenedor-h3{
+    font-family: "Open Sans";
+    color: #ffffff;
+    text-align: center;
+}
+
+#url{
+    font-family: "Open Sans";
+    color: #ffffff;
+    margin: 10px;
+}
+
+#tipo-texto{
+    background-color: #30343f;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    height: 40px;
+    width: 220px;
+}
+
+#fondo{
+    font-family: "Open Sans";
+    color: #ffffff;
+    margin: 10px;
+}
+
+#colorBackground{
+    width:90px;
+}
+
+#opciones-fondo{
+    font-family: "Open Sans";
+    font-size: 15px;
+    text-align: center;
+    background-color: #30343f;
+    color: #ffffff;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+}
+
+#filtros, .h5{
+    font-family: "Open Sans";
+    color: #ffffff;
+    margin: 5px;
+}
+
+#range-opciones{
+    font-family: "Open Sans";
+    color: #ffffff;
+    font-size: 13px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#range-opciones, input type range{
+    accent-color:  #4e5565;
+}
+
+#restablecer{
+    height: 40px;
+    margin: 10px;
+    font-family: "Open Sans";
+    font-size: 13px;
+    background-color: #393e49;
+    color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+}
+
+#restablecer:hover{
+    cursor: pointer;
+    background-color: #4e5565;
+}
+/*------^AQUI TERMINA EL ASIDE DE OPCIONES DE IMAGEN^---------*/
+
+#opciones-texto{
+    width: 18%;
+    height: 900px;
+    background-color: #252935;
+    /*border: 3px solid burlywood;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tituloh3{
+    font-family: "Open Sans";
+    color: #ffffff;
+    text-align: center;
+}
+
+#superior, #tituloh5, #titulo-fuente{
+    font-family: "Open Sans";
+    color: #ffffff;
+    margin: 10px;
+}
+
+#parrafo-topt, #parrafo-botont{
+    height: 40px;
+    width: 220px;
+    /*border:5px solid green ;*/
+    margin: 5px;
+    font-family: "Open Sans";
+    text-align: left;
+    align-content: center;
+    color: #ffffff;
+    background-color: #30343f;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#texto-superior, #texto-inferior{
+    font-family: "Open Sans";
+    font-size: 12px;
+    color: #ffffff;
+    margin: 10px;
+}
+
+#clases-fuentes{
+    font-family: "Open Sans";
+    font-size: 15px;
+    text-align: left;
+    background-color: #30343f;
+    color: #ffffff;
+    height: 40px;
+    width: 220px;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    margin: 10px;
+}
+
+#tamaño-texto{
+    height: 30px;
+    width: 110px;
+    margin: 10px;
+    background-color: #30343f;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+
+#izquierda, #centro, #derecha{
+    height: 30px;
+    width: 30px;
+    background-color: #30343f;
+    color: #ffffff;
+    border-radius: 3px 3px 3px 3px;
+    border: none;
+}
+
+#izquierda:hover, #centro:hover, #derecha:hover{
+    cursor: pointer;
+    background-color: #4e5565;
+}
+
+#colorh5, #fondoh5, #contornoh5, #espaciadoh5, #interlh5{
+    font-family: "Open Sans";
+    color: #ffffff;
+    margin: 10px;
+
+}
+
+#input-color{
+    margin: 10px;
+    width: 100px;
+}
+
+#input-fondo, #fondoh5{
+    margin: 10px;
+    width: 100px;
+    position: relative;
+    left: 120px;
+    bottom: 87px;
+}
+
+#fondo-transp , #input-check{
+    font-family: "Open Sans";
+    font-size: 12px;
+    color: #ffffff;
+    margin: 10px;
+    position: relative;
+    bottom: 80px;
+}
+
+#contorno-div, #espacio-div, #inter-div{
+    position: relative;
+    bottom: 70px;
+}
+
+#btn-ninguno, #btn-claro, #btn-oscuro{
+    margin: 3px;
+    width: 70px;
+    height: 35px;
+    background-color: #30343f;
+    font-family: "Open Sans";
+    font-size: 13px;
+    color: #ffffff;
+    border-radius: 3px 3px 3px 3px;
+    border: none;
+}
+
+#btn-ninguno:hover, #btn-claro:hover, #btn-oscuro:hover{
+    cursor: pointer;
+    background-color: #4e5565;
+}
+
+#input-espacio, #inter-select{
+    height: 40px;
+    width: 220px;
+    margin: 10px;
+    background-color: #30343f;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+/*------^AQUI SE TERMINA EL OPCIONES DE TEXTO^-----*/
+
+
