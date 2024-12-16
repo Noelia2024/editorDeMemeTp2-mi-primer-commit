@@ -1,0 +1,44 @@
+#contenedor-meme{
+    /*border: 5px solid yellow;*/
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%vh;
+    text-align: center;
+}
+
+.contenedor-imagen{  /*---contiene la imagen a descargar--*/
+    height: 500px;
+    width: 50%;
+    /*border: 3px solid green*/
+    background-color: #000000;
+}
+
+#texto-top, #boton-text{
+    margin: 0;
+    font-size: 40px;
+    font-family: "Impact";
+    /*border: 3px solid red;*/
+    text-align: center;
+    align-content: center;
+    height: 70px;
+    width: 50%;
+    background-color: var(--color-texto);
+}
+
+#btn-descarga{
+    padding: 15px 15px;
+    margin: 30px;
+    background-color: #2e7d32;
+    font-family: var(--font-primaria);
+    color: var(--color-texto);
+    border-radius: 3px 3px 3px 3px ;
+    border: none;
+}
+#btn-descarga:hover{
+    cursor: pointer;
+    background-color: #057a0b;
+}
+/*-------AQUI SE TERMINA LA SECCION DE MAIN-------*/

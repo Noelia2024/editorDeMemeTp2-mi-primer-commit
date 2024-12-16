@@ -1,0 +1,43 @@
+header{
+    width: 100%vw;
+    height: 130px;
+    background-color: #191e2b;
+}
+
+#titulo{     /*---h1---*/
+    margin: 0;
+    font-family: "Open Sans";
+    color: #ffffff;
+    text-align: center;
+}
+
+.botones-cabezera{    /*----botones header---*/
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#imagen, #texto, #foco{  
+    font-size: 15px; 
+    font-family: "Open Sans";
+    color: #ffffff;
+    background-color: #191e2b;
+    border-radius: 3px 3px 3px 3px;
+    border: none;
+    height: 40px;
+}
+
+#imagen:hover{
+    cursor: pointer;
+    background-color: #4e5565
+} 
+#texto:hover{
+    cursor: pointer;
+    background-color: #4e5565
+} 
+#foco:hover{
+    cursor: pointer;
+    background-color: #4e5565
+}
+/*-------^^AQUI SE TERMINA EL HEADER^^-----*/
