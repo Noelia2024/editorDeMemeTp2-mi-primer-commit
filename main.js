@@ -1,21 +1,23 @@
-/*domtoimage.toBlob($card).then((blob) => {
-    saveAs(blob, "my-meme.png");
-});*/
+window.onload= () =>{
+    //domtoimage.toBlob($card).then((blob) => {
+   // saveAs(blob, "my-meme.png");
+//});
 
 //-------MODO OSCURO/CLARO-----------//
-const $buttonFoco = document.querySelector("#foco");
+const $buttonFoco = document.querySelector("#foco"); 
 const body = document.querySelector(".modo-oscuro");
 
 $buttonFoco.addEventListener('click', () => {   
-    body.classList.toggle('modo-oscuro');
-    body.classList.toggle('modo-claro');
-    console.log("si")
+body.classList.toggle('modo-oscuro');
+body.classList.toggle('modo-claro');
+console.log("si")
 })
 
 //-----CAMBIO DE IMAGEN A TEXTO-------//
 function $(element){
     return document.querySelector(element);
 }
+
 const $buttonImagen = $("#imagen");
 const $buttonTexto = $("#texto");
 const $asideImagen = $("#opciones-imagen");
@@ -41,14 +43,38 @@ $buttonTexto.addEventListener("click", () =>{
     $asideTexto.style.display= "block";
 })
 
-//---Top/Bottom-Tex---//
-//function $(element){
-   // return document.querySelector(element)
-//}
+//--Opciones de texto-Top/Bottom-Tex---//
+function $(element){
+    return document.querySelector(element)
+}
 
-const $textAreaTop = document.querySelector("#top-tex");
-const $pTextoArriba =document.querySelector("#texto-arriba");
-const $textAreaBottom = document.querySelector("#bottom-text");
-const $pTextoAbajo = document.querySelector("#texto-abajo");
+const $inputTopText = $("#top-tex");
+const $pTextoArriba = $("#texto-arriba");
+const $inputBottomText = $("#bottom-text");
+const $pTextoAbajo = $("#texto-abajo");
+const $labelTextoSuperior = $("#texto-superior");
+const $labelTextoInferior = $("#texto-inferior");
+const $selectClasesFuentes = $("#clases-fuentes");
+const $inputTamañoTexto = $("#tamaño-texto");
+const $buttonIzquierda = $("#izquierda");
+const $buttonCentro = $("#centro");
+const $buttonDerecha = $("#derecha");
+const $inputColor = $("#input-color");
+const $inputFondo = $("#input-fondo");
+const $inputCheck = $("#input-check");
+const $buttonNinguno = $("#btn-ninguno");
+const $buttonClaro = $("#btn-claro");
+const $buttonOscuro = $("#btn-oscuro");
+const $inputEspacio = $("#input-espacio");
+const $selectInter = $("#inter-select");
 
+$inputTopText.addEventListener("input", () =>{
+    $pTextoArriba.innerText = $inputTopText.value
+})
+
+
+
+
+
+}
 

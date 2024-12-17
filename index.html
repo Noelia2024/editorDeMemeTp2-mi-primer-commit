@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-    crossorigin="anonymous">
-    </script>
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
-    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-    crossorigin="anonymous">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/css/normalize.css">
     <link rel="stylesheet" href="./styles/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,16 +106,19 @@
         <h3 id="tituloh3">TEXTO</h3>
         <h5 id="superior">SUPERIOR</h5>
         <!--<p id="parrafo-topt">TOP TEXT</p>-->
-        <textarea name="TOP TEXT" id="top-text">TOP TEXT</textarea>
+       <!--tarea name="TOP TEXT" id="top-text">TOP TEXT</textarea>---->
+        <label for="TOP TEXT"></label>
+        <input id="top-text" type="text" placeholder="TOP TEXT" />
 
         <label id="texto-superior">Sin texto superior</label>
         <input type="checkbox">
 
         <h5 id="tituloh5">INFERIOR</h5>  
         <!--<p id="parrafo-botont">BOTTOM TEXT</p>--->
-        <textarea name="BOTTOM TEXT" id="bottom-text">BOTTOM TEXT</textarea>
+    <!--extarea name="BOTTOM TEXT" id="bottom-text">BOTTOM TEXT</textarea>--->
+        <label for="BOTTOM TEX"></label>
+        <input id="bottom-text" type="text"  placeholder="BOTTOM TEX" />
 
-        
         <label id="texto-inferior">Sin texto inferior</label>
         <input type="checkbox">
 
