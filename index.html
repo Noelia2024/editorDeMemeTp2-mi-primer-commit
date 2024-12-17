@@ -33,11 +33,11 @@
     </header> 
     <main>
         <section id="contenedor-meme"> <!-------CONTENEDOR DE MEME--------------->
-            <p id="texto-top">TOP TEX</p>
+            <p id="texto-arriba">TOP TEX</p>
             <div class="contenedor-imagen">
                 <img id="imagen-descargada" src="" alt="">
             </div>  
-            <p id="boton-text">BOTTOM TEXT</p>
+            <p id="texto-abajo">BOTTOM TEXT</p>
             <button id="btn-descarga">Descargar Meme</button>
         </section>
     </main> 
@@ -109,13 +109,16 @@
     <aside id="opciones-texto">   <!--------OPCIONES DE TEXTO--------------->
         <h3 id="tituloh3">TEXTO</h3>
         <h5 id="superior">SUPERIOR</h5>
-        <p id="parrafo-topt">TOP TEXT</p>
+        <!--<p id="parrafo-topt">TOP TEXT</p>-->
+        <textarea name="TOP TEXT" id="top-text">TOP TEXT</textarea>
 
         <label id="texto-superior">Sin texto superior</label>
         <input type="checkbox">
 
         <h5 id="tituloh5">INFERIOR</h5>  
-        <p id="parrafo-botont">BOTTOM TEXT</p>
+        <!--<p id="parrafo-botont">BOTTOM TEXT</p>--->
+        <textarea name="BOTTOM TEXT" id="bottom-text">BOTTOM TEXT</textarea>
+
         
         <label id="texto-inferior">Sin texto inferior</label>
         <input type="checkbox">

@@ -8,8 +8,9 @@
     background-color: var(--color-background);
 }
 
-/*---MODO-OSCURO---*/
-:root{
+/*--- MODO-OSCURO---*/
+
+.modo-oscuro{
     --color-header: #191e2b;
     --color-background: #30343f;
     --color-aside: #252935;
@@ -22,12 +23,13 @@
 
 /*---MODO-CLARO-----*/
 
-/*:root{
+.modo-claro{
     --color-header: #e0e0e0;
     --color-background: #eeeeee;
     --color-aside: #fafafa;
-    --color-hover: #bbbbbb;
+    --color-hover: #bdbdbd;
     --color-texto: #424242;
-    --color-titulo-panel: rgb(33 33 33 / 70%);
-}*/
+    --font-primaria: 'Open Sans', sans-serif;
+    --color-titulo-parrafo: rgb(33 33 33 / 70%);
+}
 

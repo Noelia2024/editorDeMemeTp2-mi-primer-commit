@@ -1,13 +1,13 @@
 header{
     width: 100%vw;
     height: 130px;
-    background-color: #191e2b;
+    background-color: var(--color-header);
 }
 
 #titulo{     /*---h1---*/
     margin: 0;
-    font-family: "Open Sans";
-    color: #ffffff;
+    font-family: var(--font-primaria);
+    color: var(--color-texto);
     text-align: center;
 }
 
@@ -20,9 +20,9 @@ header{
 }
 #imagen, #texto, #foco{  
     font-size: 15px; 
-    font-family: "Open Sans";
-    color: #ffffff;
-    background-color: #191e2b;
+    font-family: var(--font-primaria);
+    color: var(--color-texto);
+    background-color: var(--color-header);
     border-radius: 3px 3px 3px 3px;
     border: none;
     height: 40px;
@@ -30,14 +30,14 @@ header{
 
 #imagen:hover{
     cursor: pointer;
-    background-color: #4e5565
+    background-color: var(--color-hover);
 } 
 #texto:hover{
     cursor: pointer;
-    background-color: #4e5565
+    background-color: var(--color-hover);
 } 
 #foco:hover{
     cursor: pointer;
-    background-color: #4e5565
+    background-color: var(--color-hover);
 }
 /*-------^^AQUI SE TERMINA EL HEADER^^-----*/

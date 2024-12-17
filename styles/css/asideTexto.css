@@ -20,17 +20,19 @@
     margin: 10px;
 }
 
-#parrafo-topt, #parrafo-botont{
+#top-text, #bottom-text{
     height: 40px;
     width: 220px;
     /*border:5px solid green ;*/
     margin: 5px;
+    border: none;
     font-family: var(--font-primaria);
     text-align: left;
     align-content: center;
     color: var(--color-texto);
     background-color: var(--color-background);
     border-radius: 5px 5px 5px 5px;
+
 }
 
 #texto-superior, #texto-inferior{
