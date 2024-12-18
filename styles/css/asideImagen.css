@@ -13,13 +13,13 @@
     text-align: center;
 }
 
-#url{
+#url-contenedor{
     font-family: var(--font-primaria);
     color: var(--color-texto);
     margin: 10px;
 }
 
-#tipo-texto{
+#url{
     background-color: var(--color-background);
     border-radius: 5px 5px 5px 5px;
     border: none;

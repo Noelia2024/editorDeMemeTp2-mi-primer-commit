@@ -26,7 +26,7 @@
             <button id="texto"><i class="fa-sharp fa-solid fa-a"></i>Texto</button>
             <button id="foco"><i class="fa-regular fa-lightbulb"></i>Modo Oscuro</button>
         </div>  
-    </header> 
+    </header>  
     <main>
         <section id="contenedor-meme"> <!-------CONTENEDOR DE MEME--------------->
             <p id="texto-arriba">TOP TEX</p>
@@ -41,27 +41,27 @@
         <div id="contenedor-h3">      <!--------OPCIONES DE IMAGEN-------------->
             <h3>IMAGEN</h3>
         </div>
-        <div id="url">  
+        <div id="url-contenedor">  
             <h5>URL</h5>    <!---AQUI SE COLOCA URL DE IMAGEN--->
             <form>
                 <label for="url"></label>
-                <input id="tipo-texto" type="text">
+                <input id="url" type="text">
             </form> 
         </div> 
         <div id="fondo">  
             <h5>FONDO</h5>  <!---TIPOS DE FONDO-->
             <form> 
-                <label for="color de fondo"></label>
+                <label for="colorBackground"></label>
                 <input id="colorBackground" type="color">
             
-                <label for="opciones de fondo"></label>
+                <label for="opciones-fondo"></label>
                 <select name="Ninguno" id="opciones-fondo">
-                    <option>Ninguno</option>
-                    <option>Aclarar</option>
-                    <option>Oscurecer</option>
-                    <option>Diferencia</option>
-                    <option>Luminocidad</option>
-                    <option>Multiplicar</option>
+                    <option value="unsent">Ninguno</option>
+                    <option value="lighten">Aclarar</option>
+                    <option value="darken">Oscurecer</option>
+                    <option value="difference">Diferencia</option>
+                    <option value="luminosity ">Luminocidad</option>
+                    <option value="multiply">Multiplicar</option>
                 </select>
             </form> 
         </div> 
@@ -71,31 +71,31 @@
         <div id="range-opciones">   
             <form>
                 <label>BRILLO</label>
-                <input id="brillo"  type="range" min="0" max="1">
+                <input id="brillo"  type="range" min="0" max="1" step="0.1">
 
                 <label>OPACIDAD</label>
-                <input id="opacidad" type="range" min="0" max="1">
+                <input id="opacidad" type="range" min="0" max="1" step="0.1">
 
                 <label>CONTRASTE</label>
-                <input id="contraste" type="range" min="100" max="1000">
+                <input id="contraste" type="range" min="100%" max="1000%" step="1%">
 
                 <label>DESENFOQUE</label>
-                <input id="desenfoque" type="range" min="0" max="10">
+                <input id="desenfoque" type="range" min="0px" max="10px" step="0.1px">
 
                 <label>ESCALA DE GRISES</label>
-                <input id="escala" type="range" min="0" max="100">
+                <input id="escala" type="range" min="0%" max="100%" step="1%">
 
                 <label>SEPIA</label>
-                <input id="sepia" type="range" min="0" max="100">
+                <input id="sepia" type="range" min="0%" max="100%" step="1%">
 
                 <label>HUE</label>
-                <input id="hue" type="range" min="0" max="360">
+                <input id="hue" type="range" min="0deg" max="359deg" step="1deg">
 
                 <label>SATURADO</label>
-                <input id="saturado" type="range" min="100" max="1000">
+                <input id="saturado" type="range" min="100%" max="1000%" step="10%">
 
                 <label>NEGATIVO</label>
-                <input id="negativo" type="range" min="0" max="1">
+                <input id="negativo" type="range" min="0" max="1" step="0.1">
             </form>
         </div>
         <div >  
@@ -105,7 +105,7 @@
     <aside id="opciones-texto">   <!--------OPCIONES DE TEXTO--------------->
         <h3 id="tituloh3">TEXTO</h3>
         <h5 id="superior">SUPERIOR</h5>
-        
+
         <label for="top-text"></label>
         <input id="top-text" type="text" placeholder="TOP TEXT" />
 
@@ -163,7 +163,7 @@
         </div>
         <div id="espacio-div">  <!-----ESPACIADO---------->
             <h5 id="espaciadoh5">ESPACIADO</h5>
-            <label for="espaciado"></label>
+            <label for="input-espacio"></label>
             <input id="input-espacio" type="number" min="10"  max="50">
         </div>
         <div id="inter-div">  <!------INTERNLINEADO---------->
