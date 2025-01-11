@@ -61,9 +61,14 @@ const $buttonRestablecer = $("#restablecer");
 const $imgDescargada = $("#imagen-descargada");
 const $sectionContenedor = $("#contenedor-meme");
 
+$imgDescargada.addEventListener("load", ()=>{
+    $imgDescargada.style.maxWidth = "100%";
+    $imgDescargada.style.maxHeight = "100%";
+    $imgDescargada.style.objectFit = "contain";
+})
 
-$inputUrl.addEventListener("click", () =>{  
-    $imgDescargada.src = $inputUrl.value
+$inputUrl.addEventListener("input", () =>{  
+    $imgDescargada.src = $inputUrl.value;   //arreglado (Recuperatorio)
     console.log("url")
 
 })
@@ -78,70 +83,78 @@ $selectOpcipnesFondo.addEventListener("input", () =>{
     console.log($selectOpcipnesFondo.value)
 })
 
+function actualizarFiltros(){
+    $imgDescargada.style.filter = 
+        `brightness(${$inputBrillo.value})
+        opacity(${$inputOpacidad.value })
+        contrast(${$inputContraste.value}%)
+        blur(${$inputDesenfoque.value}px)
+        grayscale(${$inputEscala.value}%)
+        sepia(${$inputSepia.value}%)
+        hue-rotate(${$inputHue.value}deg)
+        saturate(${$inputSaturado.value}%)
+        invert(${$inputNegativo.value})`;
+}
+
+actualizarFiltros()
+
+
 $inputBrillo.addEventListener("input", () =>{
-    $imgDescargada.style.filter = $inputBrillo.value
-    console.log($inputBrillo.value)
+    actualizarFiltros()
 });
 
 $inputOpacidad.addEventListener("input", () =>{
-    $imgDescargada.style.filter = $inputOpacidad.value
-    console.log($inputOpacidad.value)
+    actualizarFiltros()
 });
 
 $inputContraste.addEventListener("input", () =>{
-    $imgDescargada.style.filter = $inputContraste.value
-    console.log($inputContraste.value)
+    actualizarFiltros()
 });
 
 $inputDesenfoque.addEventListener("input", () =>{
-    $imgDescargada.style.filter = $inputDesenfoque.value
-    console.log($inputDesenfoque.value)
+    actualizarFiltros()
 });
 
 $inputEscala.addEventListener("input", () =>{
-    $imgDescargada.style.filter = $inputEscala.value
-    console.log($inputEscala.value)
+    actualizarFiltros()
 });
 
 $inputSepia.addEventListener("input", () =>{
-    $imgDescargada.style.filter = $inputSepia.value
-    console.log($inputSepia.value)
-});
+    actualizarFiltros()
+})
 
 $inputHue.addEventListener("input", () =>{
-    $imgDescargada.style.filter = $inputHue.value
-    console.log($inputHue.value)
+    actualizarFiltros()
 });
 
 $inputSaturado.addEventListener("input", () =>{
-    $imgDescargada.style.filter = $inputSaturado.value
-    console.log($inputSaturado.value)
+    actualizarFiltros()
 });
 
 $inputNegativo.addEventListener("input", () =>{
-    $imgDescargada.style.filter = $inputNegativo.value
-    console.log($inputNegativo.value)
+    actualizarFiltros()
 });
 
-$buttonDescarga.addEventListener("click", () =>{
-    domtoimage.toBlob($sectionContenedor)
-    .then((blob) => {
-    saveAs(blob, "my-meme.png");
-    console.log("descarga lista")
-})
+$buttonDescarga.addEventListener("click", (e) => {
+    console.log(e)
+    domtoimage.toBlob($sectionContenedor).then((blob) => {
+        saveAs(blob, "my-meme.png");
+    }).catch((error)=> {console.log(error)});
 })
 
 
-function restablecerValores(){
+
+function restablecerValores(){    //arreglado (Recuperatorio)
     $inputBrillo.value = "1"
     $inputOpacidad.value = "1"
-    $inputContraste.value ="100%"
-    $inputDesenfoque.value = "0px"
-    $inputEscala.value = "0%"
-    $inputSepia.value = "0%"
-    $inputHue.value = "0deg"
-    $inputSaturado.value ="100%"
-    $inputNegativo.value = "1"
+    $inputContraste.value ="100"
+    $inputDesenfoque.value = "0"
+    $inputEscala.value = "0"
+    $inputSepia.value = "0"
+    $inputHue.value = "0"
+    $inputSaturado.value ="100"
+    $inputNegativo.value = "0"
+    actualizarFiltros()
 };
 
 restablecerValores()
@@ -155,7 +168,7 @@ console.log("restablecer");
 function $(element){           //<<=======OPCIONES-DE-TEXTO-------//                
     return document.querySelector(element)
 }
-  
+
 const $inputTopText = $("#top-text");
 const $pTextoArriba = $("#texto-arriba");
 const $inputBottomText = $("#bottom-text");
@@ -245,15 +258,18 @@ $inputColor.addEventListener("input", () =>{
 });
 
 $inputFondo.addEventListener("input", () =>{
-    $divContenedorImagen.style.backgroundColor = $inputFondo.value
+    $pTextoArriba.style.backgroundColor = $inputFondo.value  // arreglado (recuperatorio)
+    $pTextoAbajo.style.backgroundColor = $inputFondo.value   // arreglado (recuperatorio)
     console.log("fondo")
 });
 
 $inputCheck.addEventListener("click", () =>{
     if($inputCheck.checked){
-        $divContenedorImagen.style.backgroundColor = "transparent"
+        $pTextoArriba.style.backgroundColor = "transparent"  //arreglado (Recuperatorio)
+        $pTextoAbajo.style.backgroundColor = "transparent"
     } else {
-        $divContenedorImagen.style.backgroundColor = "black"
+        $pTextoArriba.style.backgroundColor = "black"        //arreglado (Recuperatorio)
+        $pTextoAbajo.style.backgroundColor = "black"
     }
 });
 
