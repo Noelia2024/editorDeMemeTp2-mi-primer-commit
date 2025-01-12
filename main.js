@@ -83,7 +83,7 @@ $selectOpcipnesFondo.addEventListener("input", () =>{
     console.log($selectOpcipnesFondo.value)
 })
 
-function actualizarFiltros(){
+function actualizarFiltros(){                //arreglado (Recuperatorio)
     $imgDescargada.style.filter = 
         `brightness(${$inputBrillo.value})
         opacity(${$inputOpacidad.value })
